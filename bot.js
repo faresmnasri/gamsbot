@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "بيرفكس البوت";
+const fs = require("fs");
+const prefix = "-";
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
@@ -62,16 +63,9 @@ if (message.content.startsWith(prefix + 'mypoints')) {
   }
   fs.writeFile("./points.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
-  })
-});
+})
 
-
-
-
-
-            })
-    }
-    });
+}); 
 client.on("message", function(message) {
    if(message.content.startsWith(prefix + "rps")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
