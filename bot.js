@@ -410,7 +410,7 @@ if (!points[message.author.id]) points[message.author.id] = {
 
     let id = message.author.id,prefix="!";
 
-    if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
+    if (speed[id] && (new Date).getTime() - spee[id] < 15*1000) {
 
         let r = (new Date).getTime() - spee[id];
 
